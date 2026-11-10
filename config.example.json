@@ -1,0 +1,27 @@
+{
+  "$comment": "Copy to config.json (git-ignored) and replace every placeholder. Field reference: docs/DEPLOYMENT.md#configuration.",
+  "tenantId": "00000000-0000-0000-0000-000000000000",
+  "subscriptionId": "00000000-0000-0000-0000-000000000000",
+  "fabric": {
+    "capacityId": "00000000-0000-0000-0000-000000000000",
+    "workspaceName": "Maison MTL Retail IQ",
+    "loaderWorkspaceName": "Maison MTL Seed Loader"
+  },
+  "sql": {
+    "network": "public",
+    "resourceGroup": "rg-maison-mtl-retail-iq",
+    "serverName": "sql-maison-mtl-change-me",
+    "location": "canadacentral",
+    "createServer": true,
+    "database": "mtl_retail",
+    "autoPauseDelayMinutes": 60
+  },
+  "privateNetwork": {
+    "gatewayId": ""
+  },
+  "mirroring": {
+    "servicePrincipalName": "sp-fabric-mirror-mtl-retail",
+    "connectionName": "Maison MTL Retail IQ - mtl_retail",
+    "secretLifetimeDays": 180
+  }
+}

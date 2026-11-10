@@ -1,0 +1,52 @@
+# Local configuration and deployment state: environment IDs, URLs and evidence never belong in git
+config.json
+config.*.json
+!config.example.json
+artifacts/
+artifacts-*/
+.env
+.env.*
+!.env.example
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Node and build output
+node_modules/
+dist/
+*.tsbuildinfo
+.temp/
+coverage/
+
+# Rayfin generated files (written by `rayfin up`, `rayfin env` and `python deploy.py app`)
+app/.env.local
+app/rayfin/.env
+app/rayfin/.deployments.json
+app/rayfin/.temp/
+app/rayfin/functions/src/fabric_config.ts
+**/secrets.generated.*
+app/rayfin/functions/local.settings.json
+app/rayfin/functions/deploymetadata.json
+app/rayfin/functions/host.json
+app/rayfin/functions/bin/
+app/rayfin/functions/obj/
+app/preview/
+
+# Screenshots and exported report pages
+screenshots/
+report-pages/
+*.png
+*.jpg
+*.jpeg
+!docs/images/**
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,32 @@
+import type { RetailData } from '@/services/retail';
+
+export const fixture: RetailData = {
+  snapshot: {
+    id: 's', snapshotDate: '2026-11-03', publishedAt: '2026-11-04T20:00:00Z', netSalesLast28: 3010708, netSalesLast28LY: 2481998,
+    last28GrowthPct: 21.3, unitsLast28: 29336, grossMarginPctLast28: 63.19, netSalesYTD: 17932850.3, ytdGrowthPct: 6.35,
+    storeOnHandUnits: 11856, storeOnOrderUnits: 2134, dcOnHandUnits: 20807, inventoryCost: 512345, positions: 600,
+    outOfStockPositions: 19, belowReorderPointPositions: 95, criticalPositions: 21, highRiskPositions: 80,
+    recommendedUnitsHighRisk: 1450, forecastUnits28: 33000, forecastNetSales28: 3300000, forecastWapePct: 38.2,
+    baselineWapePct: 52.1, forecastModel: 'mtl-sales-forecast-lgbm v1', stockModel: 'mtl-low-stock-days-lgbm v1',
+    generatedAt: new Date('2026-11-04T20:00:00Z'),
+  },
+  stores: [{ id: '1', storeCode: 'MT-CV', storeName: 'Maison MTL Montréal Centre-Ville', city: 'Montréal', region: 'Montréal',
+    netSalesLast28: 459997, netSalesLast28LY: 380000, last28GrowthPct: 21.05, unitsLast28: 4400, grossMarginPctLast28: 63.1,
+    netSalesYTD: 2700000, ytdGrowthPct: 6.1, onHandUnits: 1800, outOfStockPositions: 3, belowReorderPointPositions: 12,
+    highRiskPositions: 14, forecastUnits28: 5000 }],
+  categories: [{ id: 'c', categoryId: 'Women|Outerwear', department: 'Women', category: 'Outerwear', netSalesLast28: 500000,
+    last28GrowthPct: 45.2, unitsLast28: 1400, grossMarginPctLast28: 59.2, onHandUnits: 300, sellThroughPct: 82.4,
+    weeksOfSupply: 0.9, outOfStockPositions: 2 }],
+  products: [{ id: 'p', sku: 'W-FTW-601', productName: "Women's Waterproof Winter Boot", department: 'Women', category: 'Footwear',
+    brand: 'Nordik', supplierCode: 'SUP-NFC', unitPrice: 195, casePack: 6, netSalesLast28: 120000, unitsLast28: 640,
+    last28GrowthPct: 95.5, onHandUnits: 12, dcOnHandUnits: 0, outOfStockStores: 7, belowReorderPointStores: 10, forecastUnits28: 700 }],
+  trends: [{ id: 't1', month: '2026-10', department: 'Women', netSales: 1200000, netSalesLY: 1000000, units: 11000 },
+           { id: 't2', month: '2026-11', department: 'Women', netSales: 160000, netSalesLY: 120000, units: 1500 }],
+  demand: [{ id: 'd1', day: '2026-11-03', department: 'All', kind: 'Actual', units: 1200 },
+           { id: 'd2', day: '2026-11-04', department: 'All', kind: 'Forecast', units: 1150, unitsLow: 900, unitsHigh: 1400 }],
+  risks: [{ id: 'r', positionId: 'MT-CV|W-FTW-601', storeCode: 'MT-CV', storeName: 'Maison MTL Montréal Centre-Ville', sku: 'W-FTW-601',
+    productName: "Women's Waterproof Winter Boot", department: 'Women', category: 'Footwear', onHandUnits: 0, onOrderUnits: 0,
+    reorderPointUnits: 9, daysOfSupply: 0, stockStatus: 'Out of stock', forecast28Units: 64.2, predictedLowStockDate: '2026-11-03',
+    predictedDaysToLow: 0, riskLevel: 'Critical', riskRank: 1, recommendedReorderQty: 36, recommendedAction: 'Expedite supplier PO',
+    dcOnHandUnits: 0 }],
+};
